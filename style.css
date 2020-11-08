@@ -11,7 +11,8 @@ body{
 }
 
 h1{
-    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Great Vibes', cursive; */
+    font-family: 'Sail', cursive;
     font-size: 70px;
     color: rgb(48, 46, 46);
 }
@@ -66,10 +67,18 @@ p{
 .col-2{
     flex-basis:50%;
     min-width: 300px;
+    
 }
 .col-2 img{
     max-width: 100%;
-    padding:50px 0;
+    /* padding:50px 0; */
+
+    
+    /* to remove space between div and img */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: block; 
 }
 
 .btn{
@@ -300,10 +309,73 @@ ul{
 select{
     border: 1px solid rgb(138, 88, 96);
 }
+select:focus{
+    outline:none;
+}
 
+.page-btn{
+    margin: 0 auto 80px;
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #874e70;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+ background: #874e70;
+ color: white;
+}
 
+/* --------------------------single product page-------------------  */
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding-bottom: 5px;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border:1px solid  #874e70;
+}
+input:focus{
+    outline: none;
+}
+.single-product .fa{
+    color: #874e70;
+    margin-left: 10px;
 
+}
 
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
 
 
 
@@ -319,7 +391,8 @@ select{
         position: absolute;
         top: 70px;
         left:0;
-        background:transparent;
+        /* background:rgb(75, 55, 55); */
+         background:transparent; 
         width: 100%;
         overflow: hidden;
         transition: max-height 0.5s;
@@ -335,9 +408,11 @@ select{
     }
     .fa-bars{
         display:block;
-        cursor: pointer;
+        cursor: pointer;        
     }
-    
+    hr{
+        display:none;
+    }
 }
 
 @media only screen and (max-width:600px)
@@ -347,6 +422,16 @@ select{
     }
     .col-2, .col-3, .col-4{
         flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding:20px 0;
+    }
+    .single-product h2{
+        font-size: 26px;
+        line-height: 35px;
     }
 }
 
